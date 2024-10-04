@@ -28,12 +28,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-gradient-to-r from-green-400 to-blue-500 shadow-lg z-50">
+    <header className="bg-gradient-to-r from-purple-600 to-indigo-800 shadow-lg z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link
             to="/"
-            className="text-2xl md:text-3xl font-bold text-white hover:text-green-100 transition duration-300 flex items-center"
+            className="text-2xl md:text-3xl font-bold text-gray-200 hover:text-gray-100 transition duration-300 flex items-center"
           >
             <FaWallet className="mr-2" />
             ExpenseTracker
@@ -45,7 +45,7 @@ export default function Header() {
                   <li>
                     <Link
                       to="/"
-                      className="text-white hover:text-green-100 transition duration-300 flex items-center"
+                      className="text-gray-200 hover:text-gray-100 transition duration-300 flex items-center"
                     >
                       <FaChartPie className="mr-2" />
                       Dashboard
@@ -54,7 +54,7 @@ export default function Header() {
                   <li className="relative" ref={userMenuRef}>
                     <button
                       onClick={() => setShowUserMenu(!showUserMenu)}
-                      className="flex items-center space-x-2 text-white hover:text-green-100 transition duration-300 bg-white bg-opacity-20 rounded-full px-4 py-2"
+                      className="flex items-center space-x-2 text-gray-200 hover:text-gray-100 transition duration-300 bg-white bg-opacity-20 rounded-full px-4 py-2"
                     >
                       <FaUser />
                       <span className="font-semibold">{userName}</span>
@@ -70,14 +70,14 @@ export default function Header() {
                         >
                           <Link
                             to="/profile"
-                            className="px-4 py-2 text-sm text-gray-700 hover:bg-green-500 hover:text-white transition duration-300 flex items-center"
+                            className="px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white transition duration-300 flex items-center"
                           >
                             <FaCog className="mr-2" />
                             Profile
                           </Link>
                           <button
                             onClick={handleLogout}
-                            className="px-4 py-2 text-sm text-gray-700 hover:bg-green-500 hover:text-white w-full text-left transition duration-300 flex items-center"
+                            className="px-4 py-2 text-sm text-gray-700 hover:bg-indigo-500 hover:text-white w-full text-left transition duration-300 flex items-center"
                           >
                             <FaSignOutAlt className="mr-2" />
                             Logout
@@ -92,7 +92,7 @@ export default function Header() {
                   <li>
                     <Link
                       to="/signin"
-                      className="text-white hover:text-green-100 transition duration-300 bg-white bg-opacity-20 rounded-full px-4 py-2"
+                      className="text-gray-200 hover:text-gray-100 transition duration-300 bg-white bg-opacity-20 rounded-full px-4 py-2"
                     >
                       Sign In
                     </Link>
@@ -100,7 +100,7 @@ export default function Header() {
                   <li>
                     <Link
                       to="/signup"
-                      className="text-white hover:text-green-100 transition duration-300 bg-green-500 rounded-full px-4 py-2"
+                      className="text-gray-200 hover:text-gray-100 transition duration-300 bg-indigo-600 hover:bg-indigo-700 rounded-full px-4 py-2"
                     >
                       Sign Up
                     </Link>
